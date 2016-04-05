@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="main-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">DJAMEL EDDINE</li>
+      <li class="has-form">
+  <div class="row collapse">
+    <div class="large-8 small-9 columns">
+      <input type="text" placeholder="Find Stuff">
+    </div>
+    <div class="large-4 small-3 columns">
+      <a href="#" class="alert button expand">Search</a>
+    </div>
+  </div>
+</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+      <li class="has-submenu">
+        <a href="#">Tools</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="<%= new_plate_path %>">New Plate</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+</div>
+
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>

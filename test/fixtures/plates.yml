@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  siteid: MyString
+  camid: MyString
+  plate: MyString
+  confidence: MyString
+  process: MyString
+  x: MyString
+  'y': MyString
+  uuid: MyString
+
+two:
+  siteid: MyString
+  camid: MyString
+  plate: MyString
+  confidence: MyString
+  process: MyString
+  x: MyString
+  'y': MyString
+  uuid: MyString

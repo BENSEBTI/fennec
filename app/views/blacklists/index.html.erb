@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blacklist listing</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th>Violation type</th>
+      <th>Plate</th>
+      <th>Car model</th>
+      <th>Created_at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blacklists.each do |blacklist| %>
+      <tr>
+        <td><%= blacklist.comment %></td>
+        <td><%= blacklist.vtype %></td>
+        <td><span style="color:#FF0040"><%= blacklist.platen %></td>
+        <td><%= blacklist.cmodel %></td>
+        <td><%= blacklist.created_at %></td>
+        <td><%= link_to 'Show', blacklist %></td>
+        <td><%= link_to 'Edit', edit_blacklist_path(blacklist) %></td>
+        <td><%= link_to 'Destroy', blacklist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New blacklist', new_blacklist_path %>
+

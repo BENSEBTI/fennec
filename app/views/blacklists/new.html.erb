@@ -1,0 +1,19 @@
+<%= form_for(@blacklists) do |f| %>
+  <div class="field">
+    <%= f.label :Comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :vtype %><br>
+    <%= f.text_field :vtype %>
+  </div>
+  <div class="field">
+    <%= f.label :platen %><br>
+    <%= f.text_field :platen %>
+  </div>
+  <div class="field">
+    <%= f.label :cmodel %><br>
+    <%= f.text_field :cmodel %>
+  </div>
+  <%= f.submit %>
+  <% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Siteid:</strong>
+  <%= @plate.siteid %>
+</p>
+
+<p>
+  <strong>Camid:</strong>
+  <%= @plate.camid %>
+</p>
+
+<p>
+  <strong>Plate:</strong>
+  <%= @plate.plate %>
+</p>
+
+<p>
+  <strong>Confidence:</strong>
+  <%= @plate.confidence %>
+</p>
+
+<p>
+  <strong>Process:</strong>
+  <%= @plate.process %>
+</p>
+
+<p>
+  <strong>X:</strong>
+  <%= @plate.x %>
+</p>
+
+<p>
+  <strong>Y:</strong>
+  <%= @plate.y %>
+</p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= image_tag( @plate.uuid, :size => "260x180") %>
+</p>
+
+<%= link_to 'Edit', edit_plate_path(@plate) %> |
+<%= link_to 'Back', plates_path %>
