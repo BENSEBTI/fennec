@@ -1,4 +1,4 @@
-GUI for openalpr
+GUI for openalprd
 
 for demo check https://fennec-bensebti.c9users.io/ 
 
